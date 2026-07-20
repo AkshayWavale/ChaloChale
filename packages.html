@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - ChaloChale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            min-height: 100vh;
+        }
+        
+        .navbar {
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffc107 !important;
+        }
+        
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        .nav-link:hover {
+            color: #ffc107 !important;
+            background: rgba(255,193,7,0.1);
+        }
+        
+        .btn-warning {
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .btn-warning:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,193,7,0.4);
+        }
+        
+        .package-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            background: white;
+            height: 100%;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        .package-card .card-body {
+            padding: 2rem;
+        }
+        
+        .package-card h5 {
+            color: #333;
+            font-weight: 700;
+        }
+        
+        .package-card .text-success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .package-card .btn-primary {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: #333;
+        }
+        
+        .package-card .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(253,160,133,0.4);
+        }
+        
+        .price-green {
+            color: #28a745;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Navbar start -->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">ChaloChale</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="packages.html">Packages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="destinations.html">Destinations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="booking.html">Booking</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex flex-column flex-lg-row gap-2 ms-lg-3">
+                                <a href="signup.html" class="btn btn-warning">Sign Up</a>
+                                <a href="login.html" class="btn btn-warning">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Navbar end -->
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h1 class="fw-bold display-4">Our Packages</h1>
+                    <p class="lead text-muted">Choose from our carefully curated travel packages</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card package-card">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Goa Beach Package</h5>
+                            <p class="text-muted">Duration: 5 days / 4 nights</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Beachside Resort</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Water Sports</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Sightseeing</li>
+                            </ul>
+                            <h4 class="fw-bold price-green">₹15,999</h4>
+                            <a href="booking.html" class="btn btn-primary w-100 mt-3">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card package-card">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Manali Winter Package</h5>
+                            <p class="text-muted">Duration: 8 days / 7 nights</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Snow Activities</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Mountain Views</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Adventure Sports</li>
+                            </ul>
+                            <h4 class="fw-bold price-green">₹18,999</h4>
+                            <a href="booking.html" class="btn btn-primary w-100 mt-3">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card package-card">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Thai Package</h5>
+                            <p class="text-muted">Duration: 7 days / 6 nights</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Temple Tours</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Beach Resorts</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Thai Cuisine</li>
+                            </ul>
+                            <h4 class="fw-bold price-green">₹29,999</h4>
+                            <a href="booking.html" class="btn btn-primary w-100 mt-3">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card package-card">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Paris Romance Package</h5>
+                            <p class="text-muted">Duration: 6 days / 5 nights</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Eiffel Tower Visit</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Louvre Museum</li>
+                                <li><i class="fas fa-check text-success me-2"></i>River Seine Cruise</li>
+                            </ul>
+                            <h4 class="fw-bold price-green">₹45,999</h4>
+                            <a href="booking.html" class="btn btn-primary w-100 mt-3">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card package-card">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Dubai Luxury Package</h5>
+                            <p class="text-muted">Duration: 5 days / 4 nights</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>5-Star Hotel</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Desert Safari</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Burj Khalifa</li>
+                            </ul>
+                            <h4 class="fw-bold price-green">₹55,999</h4>
+                            <a href="booking.html" class="btn btn-primary w-100 mt-3">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card package-card">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Rome Heritage Package</h5>
+                            <p class="text-muted">Duration: 7 days / 6 nights</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="fas fa-check text-success me-2"></i>Colosseum Tour</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Vatican City</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Italian Food Tour</li>
+                            </ul>
+                            <h4 class="fw-bold price-green">₹42,999</h4>
+                            <a href="booking.html" class="btn btn-primary w-100 mt-3">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
